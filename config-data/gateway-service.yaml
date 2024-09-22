@@ -17,15 +17,15 @@ spring:
           enabled: true
       routes:
         - id: usuario-service
-          uri: lb://usuario-service
+          uri: lb://USUARIO-SERVICE  # Usa el nombre tal cual aparece en Eureka
           predicates:
             - Path=/usuario/**
         - id: carro-service
-          uri: lb://carro-service
+          uri: lb://CARRO-SERVICE  # Asegúrate de usar los nombres en mayúsculas si aparecen así
           predicates:
             - Path=/carro/**
         - id: moto-service
-          uri: lb://moto-service
+          uri: lb://MOTO-SERVICE
           predicates:
             - Path=/moto/**
 
